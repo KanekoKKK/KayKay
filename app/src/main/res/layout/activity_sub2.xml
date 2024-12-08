@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="458dp"
+        android:layout_height="928dp"
+        android:layout_marginBottom="124dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/img"
+        tools:layout_editor_absoluteX="-24dp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="174dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/zabuton"
+        tools:layout_editor_absoluteY="640dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="175dp"
+        android:layout_height="158dp"
+        android:layout_marginEnd="298dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/zabuton"
+        tools:layout_editor_absoluteY="623dp" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="381dp"
+        android:layout_height="510dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="376dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/chabudai" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="451dp"
+        android:layout_height="862dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="206dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/syouji" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="421dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="786dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/haikei" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="imageView3,imageView7,imageView8,imageView9,imageView10,imageView13" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
