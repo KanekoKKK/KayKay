@@ -41,7 +41,7 @@ public class SubActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // 次の画面にランダムインデックスを渡す
-                Intent intent = new Intent(SubActivity.this, SubActivity.class);
+                Intent intent = new Intent(SubActivity.this, SubActivity2.class);
                 intent.putExtra("random_index", randomIndex);
                 startActivity(intent);
             }
