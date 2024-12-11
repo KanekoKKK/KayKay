@@ -21,7 +21,7 @@ public class SubActivity2 extends AppCompatActivity {
         findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SubActivity2.this, SubActivity.class);
+                Intent intent = new Intent(SubActivity2.this, SubActivity2.class);
                 startActivity(intent);
             }
 

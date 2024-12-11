@@ -189,7 +189,7 @@
         android:layout_marginStart="148dp"
         android:layout_marginTop="129dp"
         android:background="#08FFFFFF"
-        android:backgroundTint="#C1D32F2F"
+        android:backgroundTint="#D32F2F"
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="@+id/imageView9"
         app:layout_constraintTop_toTopOf="@+id/imageView9"

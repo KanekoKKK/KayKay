@@ -46,4 +46,13 @@
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="412dp"
+        android:layout_height="116dp"
+        android:backgroundTint="#02FFFFFF"
+        app:cornerRadius="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
