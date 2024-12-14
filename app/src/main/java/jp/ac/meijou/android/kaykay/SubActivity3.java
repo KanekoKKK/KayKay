@@ -13,24 +13,27 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class SubActivity2 extends AppCompatActivity {
+public class SubActivity3 extends AppCompatActivity {
     private void setupButtonClickListener(int buttonId, final Class<?> targetActivity) {
         findViewById(buttonId).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SubActivity2.this, targetActivity);
+                Intent intent = new Intent(SubActivity3.this, targetActivity);
                 startActivity(intent);
             }
         });
     }
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sub2);
+        setContentView(R.layout.activity_sub3); // 遷移後のレイアウトを指定{
         setupButtonClickListener(R.id.button3, SubActivity2.class);
         setupButtonClickListener(R.id.button4, SubActivity.class);
         setupButtonClickListener(R.id.button5, SubActivity.class);
-        setupButtonClickListener(R.id.button6, SubActivity3.class);// 遷移後のレイアウトを指定{
-    }
-}
+        setupButtonClickListener(R.id.button6, SubActivity3.class);
 
+
+
+    }
+
+
+    }

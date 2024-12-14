@@ -80,12 +80,12 @@
         app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/button6"
         android:layout_width="94dp"
         android:layout_height="110dp"
         android:layout_marginStart="308dp"
         android:layout_marginTop="28dp"
-        android:backgroundTint="#14F4A7B9"
+        android:backgroundTint="#03F4A7B9"
         android:text="素　材"
         android:textColor="@color/black"
         app:cornerRadius="6dp"
@@ -93,12 +93,12 @@
         app:layout_constraintTop_toTopOf="@+id/imageView13" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/button4"
         android:layout_width="91dp"
         android:layout_height="116dp"
         android:layout_marginStart="104dp"
         android:layout_marginTop="28dp"
-        android:backgroundTint="#16F4A7B9"
+        android:backgroundTint="#03F4A7B9"
         android:fontFamily="monospace"
         android:text="図　鑑"
         android:textColor="@color/black"
@@ -108,12 +108,12 @@
         app:layout_constraintTop_toTopOf="@+id/imageView13" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/button5"
         android:layout_width="87dp"
         android:layout_height="141dp"
         android:layout_marginStart="212dp"
         android:layout_marginTop="12dp"
-        android:backgroundTint="#0DF4A7B9"
+        android:backgroundTint="#05F4A7B9"
         android:text="合成　抽出"
         android:textColor="@color/black"
         app:cornerRadius="6dp"
@@ -162,25 +162,26 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="129dp"
-        android:layout_height="385dp"
-        android:layout_marginStart="288dp"
-        android:layout_marginTop="188dp"
+        android:layout_width="137dp"
+        android:layout_height="434dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="152dp"
         app:layout_constraintStart_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="@+id/imageView3"
         app:srcCompat="@drawable/kakejiku" />
+
+    　　　
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="448dp"
-        android:layout_marginTop="352dp"
+        android:layout_marginTop="201dp"
+        android:layout_marginEnd="37dp"
         android:text="愛"
         android:textSize="60sp"
-        app:layout_constraintStart_toStartOf="@+id/imageView10"
-        app:layout_constraintTop_toTopOf="@+id/imageView3" />
-    　　　
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="@+id/imageView6" />
 
     <ImageView
         android:id="@+id/favo"
