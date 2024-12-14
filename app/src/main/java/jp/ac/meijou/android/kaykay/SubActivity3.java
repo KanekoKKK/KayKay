@@ -22,6 +22,7 @@ public class SubActivity3 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
