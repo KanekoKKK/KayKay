@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
     <ImageView
         android:id="@+id/imageView14"
         android:layout_width="411dp"
@@ -336,7 +337,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView16" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button8"
         android:layout_width="91dp"
         android:layout_height="61dp"
         android:layout_marginStart="160dp"

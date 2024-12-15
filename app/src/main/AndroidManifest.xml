@@ -25,6 +25,9 @@
         <activity android:name=".SubActivity2" />
         <activity android:name=".SubActivity3" />
         <activity android:name=".SubActivity4" />
+        <activity android:name=".SubActivity5g" />
+        <activity android:name=".SubActivity5t" />
+
 
         <meta-data
             android:name="preloaded_fonts"

@@ -110,8 +110,9 @@
 
     <ImageView
         android:id="@+id/imageView15"
-        android:layout_width="413dp"
-        android:layout_height="461dp"
+        android:layout_width="414dp"
+        android:layout_height="456dp"
+        android:layout_marginBottom="1dp"
         android:background="#52FFFFFF"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/imageView14"
@@ -125,7 +126,6 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/imageView15"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/haikei" />
 
     <ImageButton
@@ -328,7 +328,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView16" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button9"
         android:layout_width="91dp"
         android:layout_height="61dp"
         android:layout_marginStart="160dp"
@@ -345,7 +345,7 @@
         android:id="@+id/imageView18"
         android:layout_width="184dp"
         android:layout_height="154dp"
-        android:layout_marginStart="113dp"
+        android:layout_marginStart="110dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView15"
         app:layout_constraintStart_toStartOf="@+id/imageView16"
         app:srcCompat="@drawable/img_1" />
