@@ -25,5 +25,6 @@ public class SubActivity5t extends AppCompatActivity {
         setupButtonClickListener(R.id.button4, SubActivity.class);
         setupButtonClickListener(R.id.button5, SubActivity4.class);
         setupButtonClickListener(R.id.button6, SubActivity3.class);
+        setupButtonClickListener(R.id.button9,SubActuvity7.class);
     }
 }
