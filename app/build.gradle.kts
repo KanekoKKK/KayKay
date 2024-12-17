@@ -40,4 +40,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation(libs.appcompat.v161)
+    implementation(libs.material.v190)
+    implementation(libs.okhttp)
+    implementation("com.google.code.gson:gson:2.10")
 }

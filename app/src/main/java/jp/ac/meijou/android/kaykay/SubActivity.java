@@ -5,12 +5,15 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import java.io.IOException;
 
 public class SubActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,19 @@ public class SubActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //残高表示
+        try {
+            String token = OAuth.getAccessToken();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        //WalletService.checkBalance(token);
+        TextView text = findViewById(R.id.textView3);
+        text.setText("aaa"); //テスト
+
     }
+
+
 
 }
