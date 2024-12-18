@@ -29,6 +29,8 @@
         <activity android:name=".SubActivity5t" />
         <activity android:name=".SubActivity6" />
         <activity android:name=".SubActuvity7" />
+        <activity android:name=".SubActivity8" />
+
 
 
         <meta-data

@@ -28,7 +28,7 @@ public class SubActivity3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub3); // 遷移後のレイアウトを指定{
         setupButtonClickListener(R.id.button3, SubActivity2.class);
-        setupButtonClickListener(R.id.button4, SubActivity.class);
+        setupButtonClickListener(R.id.button4, SubActivity8.class);
         setupButtonClickListener(R.id.button5, SubActivity4.class);
         setupButtonClickListener(R.id.button6, SubActivity3.class);
 
