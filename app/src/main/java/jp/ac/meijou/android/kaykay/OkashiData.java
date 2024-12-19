@@ -11,6 +11,7 @@ public class OkashiData {
     private String material2;
     private int amount;
 
+    //ImageButtonを保存
     public OkashiData(ImageButton button){
         setButton(button);
         setIsSelected(false);
@@ -19,6 +20,7 @@ public class OkashiData {
         setMaterial2("none");
         setAmount(0);
     }
+    //お菓子のデータを保存
     public void setOkashiData(String okashi, String material1, String material2, int amount){
         setOkashi(okashi);
         setMaterial1(material1);
@@ -26,6 +28,7 @@ public class OkashiData {
         setAmount(amount);
     }
 
+    //ボタンがクリックされたとき
     public void click() {
         setIsSelected(!getIsSelected());
         if (this.isSelected) {
