@@ -29,35 +29,51 @@ public class SubActivity5t extends AppCompatActivity {
         setupButtonClickListener(R.id.button4, SubActivity8.class);
         setupButtonClickListener(R.id.button5, SubActivity4.class);
         setupButtonClickListener(R.id.button6, SubActivity3.class);
-        setupButtonClickListener(R.id.button9,SubActuvity7.class);
 
-        //素材の配列
-        ImageButton items[] = {
+        //お菓子のデータ
+        OkashiData okashi[] = new OkashiData[16];
+        ImageButton buttons[] = {
                 findViewById(R.id.image16),findViewById(R.id.image17),findViewById(R.id.image18),findViewById(R.id.image19),
                 findViewById(R.id.image20),findViewById(R.id.image21),findViewById(R.id.image22),findViewById(R.id.image23),
                 findViewById(R.id.image24),findViewById(R.id.image25),findViewById(R.id.image26),findViewById(R.id.image27),
                 findViewById(R.id.image28),findViewById(R.id.image29),findViewById(R.id.image30),findViewById(R.id.image31),
         };
-        boolean[] isSelected = new boolean[items.length];
+        int o = 0;
+        for(ImageButton button : buttons){
+            okashi[o] = new OkashiData(button);
+            o++;
+        }
+        okashi[0].setOkashiData("chocolate_chip_cookie", "cookie", "chocolate", 2);
+        okashi[0].setOkashiData("candy_cola", "candy_none", "cola", 1);
 
-        for (int i = 0; i < items.length; i++) {
+        //素材の選択(クリックリスナー)
+        for (int i = 0; i < okashi.length; i++) {
             final int index = i;
-            items[i].setOnClickListener(new View.OnClickListener() {
+            okashi[i].getButton().setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    isSelected[index] = !isSelected[index];
-                    itemSelected(items[index],isSelected[index]);
+                    okashi[index].click();
                 }
             });
         }
 
-
-    }
-    private void itemSelected(ImageButton button, boolean isSelected) {
-        if (isSelected) {
-            button.setBackgroundColor(Color.parseColor("#FF0000")); // 選択状態なら半透明
-        } else {
-            button.setBackgroundColor(Color.parseColor("#52FFFFFF"));
-        }
+        //抽出ボタンを押したとき
+        findViewById(R.id.button9).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int i;
+                int countTrue = 0;
+                for(i = 0; i< okashi.length; i++){
+                    if (okashi[i].getIsSelected()==true) {
+                        countTrue++;
+                    }
+                }
+                if(countTrue == 1){
+                    //抽出機能
+                } else {
+                    //ポップアップとか？
+                }
+            }
+        });
     }
 }
