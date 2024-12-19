@@ -28,7 +28,7 @@
         <activity android:name=".SubActivity5g" />
         <activity android:name=".SubActivity5t" />
         <activity android:name=".SubActivity6" />
-        <activity android:name=".SubActuvity7" />
+        <activity android:name=".SubActivity7" />
         <activity android:name=".SubActivity8" />
 
 
