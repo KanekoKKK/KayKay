@@ -125,8 +125,7 @@
         android:layout_height="309dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/imageView15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/haikei" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/image16"
