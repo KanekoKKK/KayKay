@@ -32,9 +32,9 @@ public class SubActivity2 extends AppCompatActivity {
             public void onClick(View view) {
                 pushCount++;
                 if(pushCount==7){
-                    Intent intent = new Intent(SubActivity2.this, SubActivity.class);
-                    startActivity(intent);
                     pushCount=0;
+                    Intent intent = new Intent(SubActivity2.this, MainActivity.class);
+                    startActivity(intent);
                 }
             }
         });

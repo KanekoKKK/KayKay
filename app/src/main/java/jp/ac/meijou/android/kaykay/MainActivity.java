@@ -36,12 +36,13 @@ public class MainActivity extends AppCompatActivity {
 
         // SharedPreferencesを取得
         SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-
         // 現在の日付を取得
         String currentDate = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Calendar.getInstance().getTime());
-
         // 最終利用日を取得
         String lastUsedDate = prefs.getString(LAST_USED_DATE_KEY, "");
+
+        //残高入力
+
 
         //ボタンを押したとき
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
