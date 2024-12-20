@@ -1,8 +1,10 @@
 package jp.ac.meijou.android.kaykay;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,6 +27,116 @@ public class SubActivity5g extends AppCompatActivity {
         setupButtonClickListener(R.id.button4, SubActivity8.class);
         setupButtonClickListener(R.id.button5, SubActivity4.class);
         setupButtonClickListener(R.id.button6, SubActivity3.class);
-        setupButtonClickListener(R.id.button8, SubActivity6.class);
+
+        //ImageButtonのデータ
+        OkashiData okashi[] = new OkashiData[16];
+        ImageButton buttons[] = {
+                findViewById(R.id.image16),findViewById(R.id.image17),findViewById(R.id.image18),findViewById(R.id.image19),
+                findViewById(R.id.image20),findViewById(R.id.image21),findViewById(R.id.image22),findViewById(R.id.image23),
+                findViewById(R.id.image24),findViewById(R.id.image25),findViewById(R.id.image26),findViewById(R.id.image27),
+                findViewById(R.id.image28),findViewById(R.id.image29),findViewById(R.id.image30),findViewById(R.id.image31),
+        };
+        int o = 0;
+        for(ImageButton button : buttons){
+            okashi[o] = new OkashiData(button);
+            o++;
+        }
+        //お菓子サンプルデータ
+        okashi[0].setOkashiData("chocolate", "none", "none", 3);
+        okashi[1].setOkashiData("cola", "none", "none", 5);
+
+        //合成素材の表示
+        int k = 0;
+        while(okashi[k].getOkashi() != "none"){
+            int resId1 = getResources().getIdentifier(okashi[k].getDrawable(), "drawable", getPackageName());
+            if (resId1 != 0) {
+                Drawable material1 = getResources().getDrawable(resId1, null);
+                okashi[k].getButton().setImageDrawable(material1);
+            }
+            k++;
+        }
+
+
+        //素材の選択(クリックリスナー)
+        for (int i = 0; i < okashi.length; i++) {
+            final int index = i;
+            okashi[i].getButton().setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    okashi[index].click();
+                }
+            });
+        }
+
+        //合成ボタンを押したとき
+        findViewById(R.id.button8).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //押しているボタンの数を数える
+                int countTrue = 0;
+                for(int i = 0; i < okashi.length; i++){
+                    if (okashi[i].getIsSelected()==true) {
+                        countTrue++;
+                    }
+                }
+                if(countTrue == 2) {
+                    //合成機能
+                    String result;
+                    int isEnouch = 0;
+                    //選択した素材を保存
+                    String selected[] = {"none", "none"};
+                    boolean isFinish = false;
+                    for (int j = 0; j < okashi.length; j++) {
+                        if (okashi[j].getIsSelected()) {
+                            if (!isFinish) {
+                                if(okashi[j].getMaterial1() == "none" && okashi[j].getMaterial2() == "none"){
+                                    selected[0] = okashi[j].getOkashi();
+                                }else {
+                                    selected[0] = "none";
+                                }
+                                isEnouch = okashi[j].getAmount();
+                            } else {
+                                if(okashi[j].getMaterial1() == "none" && okashi[j].getMaterial2() == "none"){
+                                    selected[1] = okashi[j].getOkashi();
+                                }else {
+                                    selected[1] = "none";
+                                }
+                                isEnouch = isEnouch * okashi[j].getAmount();
+                                break;
+                            }
+                        }
+                    }
+                    //レシピを使って合成
+                    if(isEnouch == 0) {
+                        /*合成素材の所持数が足りない*/
+                    } else if ((selected[0] == "none" || selected[1] == "none")) {
+                        /*これ以上合成できないお菓子の場合*/
+                    } else {
+                        //正しく合成できる場合
+                        if ((selected[0] == "cookie" && selected[1] == "salt")
+                                || (selected[1] == "salt" && selected[0] == "cookie")){
+                            result = "cookie_salt";
+                        } else if ((selected[0] == "potato_chip_none" && selected[1] == "chocolate")
+                                || (selected[1] == "chocolate" && selected[0] == "potato_chip_none")){
+                            result = "chocolate_potato";
+                        } else if ((selected[0] == "candy_none" && selected[1] == "chocolate")
+                                || (selected[1] == "chocolate" && selected[0] == "candy_none")){
+                            result = "chocolate_candy";
+                        } else if ((selected[0] == "chocolate" && selected[1] == "cola")
+                                || (selected[1] == "cola" && selected[0] == "chocolate")){
+                            result = "chocolate_cola_float";
+                        } else {
+                            result = "darkmatter";
+                        }
+                        /*所持数を保存(合成元1・2 -1(amount)、合成先+1(result,所持数の保存先未実装))*/
+                        Intent intent = new Intent(SubActivity5g.this, SubActivity6.class);
+                        intent.putExtra("g_result", result);
+                        startActivity(intent);
+                    }
+                } else {
+                  /*お菓子が2個未満or3個以上選択されている*/
+                }
+            }
+        });
     }
 }
