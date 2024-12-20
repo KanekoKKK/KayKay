@@ -9,6 +9,8 @@ import androidx.room.Update;
 
 import java.util.List;
 
+import kotlinx.coroutines.flow.Flow;
+
 @Dao
 public interface InventoryDao {
     @Insert
