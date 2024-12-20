@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         int fraction;
         Intent intent;
         if (!inputText.isEmpty()) {
-            fraction = Integer.parseInt(inputText) % 100;
+            fraction = Integer.parseInt(inputText) % 50;
             intent = new Intent(MainActivity.this, SubActivity.class);
             intent.putExtra("fraction", fraction);
             startActivity(intent);

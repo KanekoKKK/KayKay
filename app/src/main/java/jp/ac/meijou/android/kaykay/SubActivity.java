@@ -27,6 +27,29 @@ public class SubActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
 
+        //獲得処理
+        Intent getIntent = getIntent();
+        int money = getIntent.getIntExtra("fraction", 50);//50はエラー
+        String result[] = {"none", "none"};
+        if(money >= 40){
+            result[0] = "chocolate_chip_cookie";
+        } else if (money >= 30) {
+            result[0] = "potato_chip";
+        } else if (money >= 20) {
+            result[0] = "candy_cola";
+        } else if (money >= 10) {
+            result[0] = "cookie";
+        }
+        money  = money % 10;
+        if(money >= 7) {
+            result[1] = "chocolate";
+        } else if (money >= 4) {
+            result[1] = "cola";
+        } else if (money >= 1) {
+            result[1] = "solt";
+        }
+
+        /*保存処理*/
+    }
 }
