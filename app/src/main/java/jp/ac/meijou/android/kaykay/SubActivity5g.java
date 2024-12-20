@@ -91,6 +91,7 @@ public class SubActivity5g extends AppCompatActivity {
                             if (!isFinish) {
                                 if(okashi[j].getMaterial1() == "none" && okashi[j].getMaterial2() == "none"){
                                     selected[0] = okashi[j].getOkashi();
+                                    isFinish = true;
                                 }else {
                                     selected[0] = "none";
                                 }
@@ -115,18 +116,18 @@ public class SubActivity5g extends AppCompatActivity {
                         //正しく合成できる場合
                         if ((selected[0] == "cookie" && selected[1] == "salt")
                                 || (selected[1] == "salt" && selected[0] == "cookie")){
-                            result = "cookie_salt";
+                            result = "material_cookie_salt";
                         } else if ((selected[0] == "potato_chip_none" && selected[1] == "chocolate")
                                 || (selected[1] == "chocolate" && selected[0] == "potato_chip_none")){
-                            result = "chocolate_potato";
+                            result = "material_chocolate_potato";
                         } else if ((selected[0] == "candy_none" && selected[1] == "chocolate")
                                 || (selected[1] == "chocolate" && selected[0] == "candy_none")){
-                            result = "chocolate_candy";
+                            result = "material_chocolate_candy";
                         } else if ((selected[0] == "chocolate" && selected[1] == "cola")
                                 || (selected[1] == "cola" && selected[0] == "chocolate")){
-                            result = "chocolate_cola_float";
+                            result = "material_chocolate_cola_float";
                         } else {
-                            result = "darkmatter";
+                            result = "material_darkmatter";
                         }
                         /*所持数を保存(合成元1・2 -1(amount)、合成先+1(result,所持数の保存先未実装))*/
                         Intent intent = new Intent(SubActivity5g.this, SubActivity6.class);
