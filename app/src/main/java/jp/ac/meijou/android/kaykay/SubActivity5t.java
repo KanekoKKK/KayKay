@@ -2,6 +2,7 @@ package jp.ac.meijou.android.kaykay;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
@@ -44,9 +45,21 @@ public class SubActivity5t extends AppCompatActivity {
             okashi[o] = new OkashiData(button);
             o++;
         }
-        //べた書きお菓子データ
+        //お菓子サンプルデータ
         okashi[0].setOkashiData("chocolate_chip_cookie", "cookie", "chocolate", 2);
-        okashi[0].setOkashiData("candy_cola", "candy_none", "cola", 1);
+        okashi[1].setOkashiData("candy_cola", "candy_none", "cola", 1);
+
+        //抽出元の表示
+        int k = 0;
+        while(okashi[k].getOkashi() != "none"){
+            int resId1 = getResources().getIdentifier(okashi[k].getDrawable(), "drawable", getPackageName());
+            if (resId1 != 0) {
+                Drawable material1 = getResources().getDrawable(resId1, null);
+                okashi[k].getButton().setImageDrawable(material1);
+            }
+            k++;
+        }
+
 
         //素材の選択(クリックリスナー)
         for (int i = 0; i < okashi.length; i++) {
@@ -74,19 +87,21 @@ public class SubActivity5t extends AppCompatActivity {
                     //抽出機能
                     for(int j = 0; j < okashi.length; j++) {
                         //結果
-                        String result[] = {okashi[j].getMaterial1(), okashi[j].getMaterial2()};
-                        if(okashi[j].getAmount() < 1){
-                            /*抽出元の所持数が足りない*/
-                        } else  if (result[0] == "none" && result[1] == "none") {
-                            /*これ以上抽出できない素材の場合*/
-                        } else {
-                            //正しく抽出できた時
-                            /*所持数を保存(抽出元-1(amount)、抽出先+1(material1・2,所持数の保存先未実装))*/
-                            Intent intent = new Intent(SubActivity5t.this, SubActivity7.class);
-                            intent.putExtra("t_result", result);
-                            startActivity(intent);
+                        if(okashi[j].getIsSelected()) {
+                            String result[] = {okashi[j].getMaterial1(), okashi[j].getMaterial2()};
+                            if(okashi[j].getAmount() < 1){
+                                /*抽出元の所持数が足りない*/
+                            } else  if (result[0] == "none" && result[1] == "none") {
+                                /*これ以上抽出できない素材の場合*/
+                            } else {
+                                //正しく抽出できた時
+                                /*所持数を保存(抽出元-1(amount)、抽出先+1(material1・2,所持数の保存先未実装))*/
+                                Intent intent = new Intent(SubActivity5t.this, SubActivity7.class);
+                                intent.putExtra("t_result", result);
+                                startActivity(intent);
+                            }
+                            break;
                         }
-                        break;
                     }
                 } else {
                     /*お菓子が0個or2個以上選択されている*/

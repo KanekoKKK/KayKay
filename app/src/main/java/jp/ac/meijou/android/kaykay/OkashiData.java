@@ -10,6 +10,7 @@ public class OkashiData {
     private String material1;
     private String material2;
     private int amount;
+    private String drawable;
 
     //ImageButtonを保存
     public OkashiData(ImageButton button){
@@ -26,6 +27,7 @@ public class OkashiData {
         setMaterial1(material1);
         setMaterial2(material2);
         setAmount(amount);
+        nameToDrawable();
     }
 
     //ボタンがクリックされたとき
@@ -36,6 +38,11 @@ public class OkashiData {
         } else {
             this.button.setBackgroundColor(Color.parseColor("#52FFFFFF"));
         }
+    }
+
+    //お菓子名から画像名
+    public void nameToDrawable() {
+        this.drawable = "material_" + this.okashi;
     }
 
     public ImageButton getButton() {return this.button;}
@@ -55,4 +62,7 @@ public class OkashiData {
 
     public int getAmount() {return this.amount;}
     public void setAmount(int amount) {this.amount = amount;}
+
+    public String getDrawable() {return this.drawable;}
+    public void setDrawable(String drawable) {this.drawable = drawable;}
 }
