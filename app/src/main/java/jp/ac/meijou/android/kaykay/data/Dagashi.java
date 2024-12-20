@@ -12,14 +12,14 @@ public class Dagashi {
     @ColumnInfo(name = "dagashi_id")
     String dagashi_id;
 
+    @ColumnInfo(name = "dagashi_type")
+    int dagashi_type;
+
     @ColumnInfo(name = "dagashi_name")
     String dagashi_name;
 
     @ColumnInfo(name = "dagashi_image")
     String dagashi_image;
-
-    @ColumnInfo(name = "dagashi_num")
-    int dagashi_num = 0;
 
     @ColumnInfo(name = "description")
     String dagashi_description;
