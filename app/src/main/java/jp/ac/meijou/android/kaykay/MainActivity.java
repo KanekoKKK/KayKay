@@ -58,19 +58,6 @@ public class MainActivity extends AppCompatActivity {
                 }
                 startActivity(intent);
             }
-
-        });
-        //開発者モード条件
-        findViewById(R.id.button7).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                i++;
-                if(i==7){
-                   Intent intent = new Intent(MainActivity.this, SubActivity.class);
-                    startActivity(intent);
-                   i=0;
-                }
-            }
         });
     }
 }
