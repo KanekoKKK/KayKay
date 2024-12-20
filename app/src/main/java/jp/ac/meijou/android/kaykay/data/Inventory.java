@@ -16,11 +16,37 @@ import androidx.room.PrimaryKey;
 public class Inventory {
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "item_index")
-    int item_index;
+    private int item_index;
 
     @ColumnInfo(name = "item_id")
-    String item_id;
+    private String item_id;
 
     @ColumnInfo(name = "item_amount")
-    int item_amount;
+    private int item_amount;
+
+
+    // setter and getter
+    public void setItem_index(int item_index) {
+        this.item_index = item_index;
+    }
+
+    public int getItem_index() {
+        return item_index;
+    }
+
+    public void setItem_id(String item_id) {
+        this.item_id = item_id;
+    }
+
+    public String getItem_id() {
+        return item_id;
+    }
+
+    public void setItem_amount(int item_amount) {
+        this.item_amount = item_amount;
+    }
+
+    public int getItem_amount() {
+        return item_amount;
+    }
 }
