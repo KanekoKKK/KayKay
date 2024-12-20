@@ -16,7 +16,6 @@ public class SubActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub);
-        ImageView iv1 = findViewById(R.id.iv1); //画像を表示させるImageView
 
         // ボタンにクリックリスナーを設定
         findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
@@ -48,6 +47,23 @@ public class SubActivity extends AppCompatActivity {
             result[1] = "cola";
         } else if (money >= 1) {
             result[1] = "solt";
+        }
+
+
+        //獲得結果表示
+        String result1 = "material_" + result[0];
+        String result2 = "material_" + result[1];
+        ImageView iv1 = findViewById(R.id.iv1);
+        int resId1 = getResources().getIdentifier(result1, "drawable", getPackageName());
+        if (resId1 != 0) {
+            Drawable material1 = getResources().getDrawable(resId1, null);
+            iv1.setImageDrawable(material1);
+        }
+        ImageView iv2 = findViewById(R.id.iv2);
+        int resId2 = getResources().getIdentifier(result2, "drawable", getPackageName());
+        if (resId2 != 0) {
+            Drawable material2 = getResources().getDrawable(resId2, null);
+            iv2.setImageDrawable(material2);
         }
 
         /*保存処理*/

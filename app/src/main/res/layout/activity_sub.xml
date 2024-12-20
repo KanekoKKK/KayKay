@@ -57,10 +57,22 @@
 
     <ImageView
         android:id="@+id/iv1"
-        android:layout_width="308dp"
-        android:layout_height="284dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="288dp"
+        android:layout_width="180dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="168dp"
+        android:background="#08FFFFFF"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/iv2"
+        android:layout_width="180dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="393dp"
         android:background="#08FFFFFF"
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
