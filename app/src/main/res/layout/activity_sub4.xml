@@ -14,7 +14,7 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/haikei" />
+        app:srcCompat="@drawable/ui_haikei" />
 
     <Button
         android:id="@+id/button3"
@@ -78,16 +78,17 @@
         android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="@+id/button3"
         app:layout_constraintTop_toTopOf="@+id/imageView14"
-        app:srcCompat="@drawable/home" />
+        app:srcCompat="@drawable/ui_home" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="89dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="106dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="@+id/imageView14"
         app:layout_constraintTop_toTopOf="@+id/imageView14"
-        app:srcCompat="@drawable/book" />
+        app:srcCompat="@drawable/ui_book" />
 
     <ImageView
         android:id="@+id/imageView11"
@@ -97,7 +98,7 @@
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="@+id/button5"
         app:layout_constraintTop_toTopOf="@+id/imageView14"
-        app:srcCompat="@drawable/gousei" />
+        app:srcCompat="@drawable/ui_gousei" />
 
     <ImageView
         android:id="@+id/imageView12"
@@ -107,7 +108,7 @@
         android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="@+id/imageView14"
         app:layout_constraintTop_toTopOf="@+id/imageView14"
-        app:srcCompat="@drawable/zairyou" />
+        app:srcCompat="@drawable/ui_zairyou" />
 
     <ImageView
         android:id="@+id/imageView15"
@@ -126,7 +127,7 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/imageView15"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/haikei" />
+        app:srcCompat="@drawable/ui_haikei" />
 
     <ImageView
         android:id="@+id/imageView19"
@@ -135,7 +136,7 @@
         android:layout_marginStart="104dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView15"
         app:layout_constraintStart_toStartOf="@+id/imageView16"
-        app:srcCompat="@drawable/gama" />
+        app:srcCompat="@drawable/ui_nabe" />
 
     <ImageButton
         android:id="@+id/image16"

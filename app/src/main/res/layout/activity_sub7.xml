@@ -11,7 +11,7 @@
         android:layout_height="931dp"
         android:scaleType="centerCrop"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/haikei"
+        app:srcCompat="@drawable/ui_haikei"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-11dp" />
 

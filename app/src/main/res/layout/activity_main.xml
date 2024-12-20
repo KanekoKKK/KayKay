@@ -16,16 +16,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="425dp"
-        android:layout_height="929dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/dagasi"
-        tools:ignore="MissingConstraints" />
-
     <EditText
         android:id="@+id/inputMoney"
         android:layout_width="300dp"
