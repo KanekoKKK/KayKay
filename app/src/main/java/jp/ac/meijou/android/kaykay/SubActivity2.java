@@ -34,6 +34,7 @@ public class SubActivity2 extends AppCompatActivity {
                 if(pushCount==7){
                     pushCount=0;
                     Intent intent = new Intent(SubActivity2.this, MainActivity.class);
+                    intent.putExtra("isDevelop", true);   //開発者モードboolean
                     startActivity(intent);
                 }
             }
