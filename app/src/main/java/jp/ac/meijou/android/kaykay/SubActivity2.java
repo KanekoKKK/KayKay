@@ -1,17 +1,10 @@
 package jp.ac.meijou.android.kaykay;
 
 import android.content.Intent;
-import android.content.res.TypedArray;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class SubActivity2 extends AppCompatActivity {
     private void setupButtonClickListener(int buttonId, final Class<?> targetActivity) {
@@ -30,7 +23,22 @@ public class SubActivity2 extends AppCompatActivity {
         setupButtonClickListener(R.id.button3, SubActivity2.class);
         setupButtonClickListener(R.id.button4, SubActivity8.class);
         setupButtonClickListener(R.id.button5, SubActivity4.class);
-        setupButtonClickListener(R.id.button6, SubActivity3.class);// 遷移後のレイアウトを指定{
+        setupButtonClickListener(R.id.button6, SubActivity3.class);// 遷移後のレイアウトを指定
+
+        //開発者モード
+        findViewById(R.id.clearButton).setOnClickListener(new View.OnClickListener() {
+            int pushCount = 0;
+            @Override
+            public void onClick(View view) {
+                pushCount++;
+                if(pushCount==7){
+                    Intent intent = new Intent(SubActivity2.this, SubActivity.class);
+                    startActivity(intent);
+                    pushCount=0;
+                }
+            }
+        });
     }
+
 }
 
