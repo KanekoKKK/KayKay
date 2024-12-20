@@ -35,11 +35,11 @@ public class InventoryViewModel extends AndroidViewModel {
     }
 
     public LiveData<List<Dagashi>> getExtractableItems() {
-        return mRepository.getExtractableItems();
+        return mExtractableItems;
     }
 
     public LiveData<List<Dagashi>> getMaterialItems() {
-        return mRepository.getMaterialItems();
+        return mMaterialItems;
     }
 
     public LiveData<Inventory> getItem(int itemIndex) {
