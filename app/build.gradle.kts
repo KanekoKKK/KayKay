@@ -46,3 +46,11 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 }
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>()
+    .configureEach {
+        kotlinOptions {
+            // targetCompatibilityと揃える
+            jvmTarget = JavaVersion.VERSION_1_8.toString()
+        }
+    }
