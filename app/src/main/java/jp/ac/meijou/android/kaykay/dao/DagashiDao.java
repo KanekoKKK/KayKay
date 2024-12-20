@@ -1,4 +1,4 @@
-package jp.ac.meijou.android.kaykay.data;
+package jp.ac.meijou.android.kaykay.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -7,7 +7,7 @@ import androidx.room.Query;
 
 import java.util.List;
 
-import kotlinx.coroutines.flow.Flow;
+import jp.ac.meijou.android.kaykay.entity.Dagashi;
 
 @Dao
 public interface DagashiDao {

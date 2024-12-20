@@ -1,4 +1,4 @@
-package jp.ac.meijou.android.kaykay.data;
+package jp.ac.meijou.android.kaykay.repository;
 
 import android.app.Application;
 
@@ -6,7 +6,10 @@ import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
-import kotlinx.coroutines.flow.Flow;
+import jp.ac.meijou.android.kaykay.dao.InventoryDao;
+import jp.ac.meijou.android.kaykay.database.InventoryDatabase;
+import jp.ac.meijou.android.kaykay.entity.Dagashi;
+import jp.ac.meijou.android.kaykay.entity.Inventory;
 
 public class InventoryRepository {
     private InventoryDao mInventoryDao;

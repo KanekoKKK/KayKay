@@ -1,4 +1,4 @@
-package jp.ac.meijou.android.kaykay.data;
+package jp.ac.meijou.android.kaykay.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -9,6 +9,9 @@ import androidx.room.Transaction;
 import androidx.room.Update;
 
 import java.util.List;
+
+import jp.ac.meijou.android.kaykay.entity.Dagashi;
+import jp.ac.meijou.android.kaykay.entity.Inventory;
 
 @Dao
 public interface InventoryDao {

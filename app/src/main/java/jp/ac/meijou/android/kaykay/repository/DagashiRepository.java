@@ -1,10 +1,14 @@
-package jp.ac.meijou.android.kaykay.data;
+package jp.ac.meijou.android.kaykay.repository;
 
 import android.app.Application;
 
 import androidx.lifecycle.LiveData;
 
 import java.util.List;
+
+import jp.ac.meijou.android.kaykay.dao.DagashiDao;
+import jp.ac.meijou.android.kaykay.database.DagashiDatabase;
+import jp.ac.meijou.android.kaykay.entity.Dagashi;
 
 public class DagashiRepository {
 

@@ -1,4 +1,4 @@
-package jp.ac.meijou.android.kaykay.data;
+package jp.ac.meijou.android.kaykay.database;
 
 import android.content.Context;
 
@@ -9,6 +9,10 @@ import androidx.room.RoomDatabase;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import jp.ac.meijou.android.kaykay.dao.InventoryDao;
+import jp.ac.meijou.android.kaykay.entity.Dagashi;
+import jp.ac.meijou.android.kaykay.entity.Inventory;
+
 @Database(entities = {Dagashi.class, Inventory.class}, version = 1, exportSchema = false)
 public abstract class InventoryDatabase extends RoomDatabase {
 
@@ -16,7 +20,7 @@ public abstract class InventoryDatabase extends RoomDatabase {
 
     private static volatile InventoryDatabase instance;
     private static final int NUMBER_OF_THREADS = 4;
-    static final ExecutorService databaseWriteExecutor = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
+    public static final ExecutorService databaseWriteExecutor = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
     public static InventoryDatabase getDatabase(final Context context) {
         if (instance == null) {
