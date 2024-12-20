@@ -9,11 +9,11 @@ import androidx.room.PrimaryKey;
 public class Dagashi {
     @PrimaryKey(autoGenerate = false)
     @NonNull
+    @ColumnInfo(name = "dagashi_id")
+    String dagashi_id;
+
     @ColumnInfo(name = "dagashi_name")
     String dagashi_name;
-
-    @ColumnInfo(name = "dagashi_variable")
-    String dagashi_variable;
 
     @ColumnInfo(name = "dagashi_image")
     String dagashi_image;

@@ -9,9 +9,9 @@ import kotlinx.coroutines.flow.Flow;
 
 @Dao
 public interface DagashiDao {
-    @Query("SELECT * FROM dagashi WHERE dagashi_name = :dagashiName")
-    public Flow<Dagashi> getDagashi(String dagashiName);
+    @Query("SELECT * FROM dagashi WHERE dagashi_id = :dagashiId")
+    public Flow<Dagashi> getDagashi(String dagashiId);
 
-    @Query("SELECT * FROM dagashi ORDER BY dagashi_name")
+    @Query("SELECT * FROM dagashi ORDER BY dagashi_id")
     public Flow<List<Dagashi>> getAllDagashi();
 }
