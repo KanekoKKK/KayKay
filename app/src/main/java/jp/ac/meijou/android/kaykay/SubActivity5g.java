@@ -119,17 +119,26 @@ public class SubActivity5g extends AppCompatActivity {
                     } else {
                         //正しく合成できる場合
                         if ((selected[0] == "cookie" && selected[1] == "salt")
-                                || (selected[1] == "salt" && selected[0] == "cookie")){
+                                || (selected[0] == "salt" && selected[1] == "cookie")){
                             result = "material_cookie_salt";
                         } else if ((selected[0] == "potato_chip_none" && selected[1] == "chocolate")
-                                || (selected[1] == "chocolate" && selected[0] == "potato_chip_none")){
+                                || (selected[0] == "chocolate" && selected[1] == "potato_chip_none")){
                             result = "material_chocolate_potato";
                         } else if ((selected[0] == "candy_none" && selected[1] == "chocolate")
-                                || (selected[1] == "chocolate" && selected[0] == "candy_none")){
+                                || (selected[0] == "chocolate" && selected[1] == "candy_none")){
                             result = "material_chocolate_candy";
                         } else if ((selected[0] == "chocolate" && selected[1] == "cola")
-                                || (selected[1] == "cola" && selected[0] == "chocolate")){
+                                || (selected[0] == "cola" && selected[1] == "chocolate")){
                             result = "material_chocolate_cola_float";
+                        } else if ((selected[0] == "cookie" && selected[1] == "chocolate")
+                                || (selected[0] == "chocolate" && selected[1] == "cookie")){
+                            result = "material_chocolate_chip_cookie";
+                        } else if ((selected[0] == "potato_chip_none" && selected[1] == "salt")
+                                || (selected[0] == "salt" && selected[1] == "potato_chip_none")){
+                            result = "potato_chip";
+                        } else if ((selected[0] == "candy_none" && selected[1] == "cola")
+                                || (selected[0] == "cola" && selected[1] == "candy")){
+                            result = "candy_cola";
                         } else {
                             result = "material_darkmatter";
                         }
