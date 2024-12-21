@@ -60,32 +60,33 @@ public class SubActivity5t extends AppCompatActivity {
             o++;
         }
 
-        // 所持している獲得駄菓子を取得
-        Dagashi[] extractableDagashiList = new Dagashi[1024];
-        LiveData<List<Dagashi>> dagashiLiveData = inventoryViewModel.getExtractableItems();
-        dagashiLiveData.observe(this, dagashiList -> {
-            if (dagashiList != null) {
-                int i = 0;
-                for (Dagashi dagashi : dagashiList) {
-                    extractableDagashiList[i] = dagashi;
-                    i++;
-                }
-            }
-        });
-
-        for (Dagashi dagashi : extractableDagashiList) {
-            String id = dagashi.getDagashi_id();
-            int type = dagashi.getDagashi_type();
-            String name = dagashi.getDagashi_name();
-            String image = dagashi.getDagashi_image();
-            String description = dagashi.getDagashi_description();
-
-            // ------------------------- okashi への代入処理?------------------------- //
-        }
+//        // 所持している獲得駄菓子を取得
+//        Dagashi[] extractableDagashiList = new Dagashi[1024];
+//        LiveData<List<Dagashi>> dagashiLiveData = inventoryViewModel.getExtractableItems();
+//        dagashiLiveData.observe(this, dagashiList -> {
+//            if (dagashiList != null) {
+//                int i = 0;
+//                for (Dagashi dagashi : dagashiList) {
+//                    extractableDagashiList[i] = dagashi;
+//                    i++;
+//                }
+//            }
+//        });
+//
+//        for (Dagashi dagashi : extractableDagashiList) {
+//            String id = dagashi.getDagashi_id();
+//            int type = dagashi.getDagashi_type();
+//            String name = dagashi.getDagashi_name();
+//            String image = dagashi.getDagashi_image();
+//            String description = dagashi.getDagashi_description();
+//
+//            // ------------------------- okashi への代入処理?------------------------- //
+//        }
 
         //お菓子サンプルデータ
         okashi[0].setOkashiData("chocolate_chip_cookie", "cookie", "chocolate", 2);
         okashi[1].setOkashiData("candy_cola", "candy_none", "cola", 1);
+        okashi[2].setOkashiData("potato_chip", "potato_chip_none", "salt", 6);
 
         //抽出元の表示
         int k = 0;
@@ -134,14 +135,14 @@ public class SubActivity5t extends AppCompatActivity {
                             } else {
                                 //正しく抽出できた時
 
-                                String extractedId = okashi[j].getOkashi();
-                                String material1Id = okashi[j].getMaterial1();
-                                String material2Id = okashi[j].getMaterial2();
-
-                                LiveData<Inventory> itemLiveData = inventoryViewModel.getItemById(extractedId);
-
-                                Inventory item = new Inventory();
-                                inventoryViewModel.getItemById(extractedId);
+//                                String extractedId = okashi[j].getOkashi();
+//                                String material1Id = okashi[j].getMaterial1();
+//                                String material2Id = okashi[j].getMaterial2();
+//
+//                                LiveData<Inventory> itemLiveData = inventoryViewModel.getItemById(extractedId);
+//
+//                                Inventory item = new Inventory();
+//                                inventoryViewModel.getItemById(extractedId);
                                 /*所持数を保存(抽出元-1(amount)、抽出先+1(material1・2,所持数の保存先未実装))*/
                                 Intent intent = new Intent(SubActivity5t.this, SubActivity7.class);
                                 intent.putExtra("t_result", result);
