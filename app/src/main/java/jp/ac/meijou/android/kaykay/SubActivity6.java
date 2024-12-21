@@ -19,14 +19,11 @@ public class SubActivity6 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub6); // 遷移後のレイアウトを指定
 
-
-
-        // ボタンにクリックリスナーを設定
+        // ホームに戻る
         findViewById(R.id.button13).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 次の画面にランダムインデックスを渡す
-                Intent intent = new Intent(SubActivity6.this, SubActivity5g.class);
+                Intent intent = new Intent(SubActivity6.this, SubActivity2.class);
                 startActivity(intent);
             }
         });

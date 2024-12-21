@@ -14,11 +14,11 @@ public class SubActivity7 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub7); // 遷移後のレイアウトを指定
-        // 抽出画面に戻るボタン
+        // ホームに戻るボタン
         findViewById(R.id.button14).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SubActivity7.this, SubActivity5t.class);
+                Intent intent = new Intent(SubActivity7.this, SubActivity2.class);
                 startActivity(intent);
             }
         });
