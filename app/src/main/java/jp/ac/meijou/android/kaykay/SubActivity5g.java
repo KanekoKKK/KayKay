@@ -44,6 +44,10 @@ public class SubActivity5g extends AppCompatActivity {
         //お菓子サンプルデータ
         okashi[0].setOkashiData("chocolate", "none", "none", 3);
         okashi[1].setOkashiData("cola", "none", "none", 5);
+        okashi[2].setOkashiData("cookie", "none", "none", 2);
+        okashi[3].setOkashiData("salt", "none", "none", 14);
+        okashi[4].setOkashiData("potato_chip_none", "none", "none", 4);
+        okashi[5].setOkashiData("candy_none", "none", "none", 7);
 
         //合成素材の表示
         int k = 0;
