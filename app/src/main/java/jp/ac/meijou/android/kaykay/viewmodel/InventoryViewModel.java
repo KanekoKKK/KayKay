@@ -1,4 +1,4 @@
-package jp.ac.meijou.android.kaykay.data;
+package jp.ac.meijou.android.kaykay.viewmodel;
 
 import android.app.Application;
 
@@ -6,6 +6,10 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
 import java.util.List;
+
+import jp.ac.meijou.android.kaykay.entity.Dagashi;
+import jp.ac.meijou.android.kaykay.entity.Inventory;
+import jp.ac.meijou.android.kaykay.repository.InventoryRepository;
 
 public class InventoryViewModel extends AndroidViewModel {
     private InventoryRepository mRepository;
@@ -44,6 +48,10 @@ public class InventoryViewModel extends AndroidViewModel {
 
     public LiveData<Inventory> getItem(int itemIndex) {
         return mRepository.getItem(itemIndex);
+    }
+
+    public LiveData<Inventory> getItemById(String itemId) {
+        return mRepository.getItemById(itemId);
     }
 
     public LiveData<List<Inventory>> getAllItems() {

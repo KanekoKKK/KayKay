@@ -1,4 +1,4 @@
-package jp.ac.meijou.android.kaykay.data;
+package jp.ac.meijou.android.kaykay.entity;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
