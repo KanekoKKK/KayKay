@@ -135,10 +135,10 @@ public class SubActivity5g extends AppCompatActivity {
                             result = "material_chocolate_chip_cookie";
                         } else if ((selected[0] == "potato_chip_none" && selected[1] == "salt")
                                 || (selected[0] == "salt" && selected[1] == "potato_chip_none")){
-                            result = "potato_chip";
+                            result = "material_potato_chip";
                         } else if ((selected[0] == "candy_none" && selected[1] == "cola")
                                 || (selected[0] == "cola" && selected[1] == "candy")){
-                            result = "candy_cola";
+                            result = "material_andy_cola";
                         } else {
                             result = "material_darkmatter";
                         }
