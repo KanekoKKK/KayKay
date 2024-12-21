@@ -183,7 +183,8 @@
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="@+id/imageView9"
         app:layout_constraintTop_toTopOf="@+id/imageView9"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        app:srcCompat="@drawable/material_chocolate_cola_float" />
 
     <ImageView
         android:id="@+id/favo2"
@@ -195,7 +196,8 @@
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="@+id/imageView9"
         app:layout_constraintTop_toTopOf="@+id/imageView9"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        app:srcCompat="@drawable/material_cookie_salt" />
 
     <ImageView
         android:id="@+id/favo3"
@@ -219,7 +221,8 @@
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="@+id/imageView9"
         app:layout_constraintTop_toTopOf="@+id/imageView9"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        app:srcCompat="@drawable/material_darkmatter"/>
 
     <Button
         android:id="@+id/clearButton"
