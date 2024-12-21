@@ -45,6 +45,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    // ViewModel
+    implementation(libs.lifecycle.viewmodel.ktx)
+    // LiveData
+    implementation(libs.lifecycle.livedata.ktx)
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>()
