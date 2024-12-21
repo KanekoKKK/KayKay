@@ -46,7 +46,7 @@ public class SubActivity extends AppCompatActivity {
         } else if (money >= 4) {
             result[1] = "cola";
         } else if (money >= 1) {
-            result[1] = "solt";
+            result[1] = "salt";
         }
 
 
