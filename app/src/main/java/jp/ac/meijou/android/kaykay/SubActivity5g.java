@@ -138,7 +138,7 @@ public class SubActivity5g extends AppCompatActivity {
                             result = "material_potato_chip";
                         } else if ((selected[0] == "candy_none" && selected[1] == "cola")
                                 || (selected[0] == "cola" && selected[1] == "candy")){
-                            result = "material_andy_cola";
+                            result = "material_candy_cola";
                         } else {
                             result = "material_darkmatter";
                         }
