@@ -50,6 +50,10 @@ public class InventoryViewModel extends AndroidViewModel {
         return mRepository.getItem(itemIndex);
     }
 
+    public LiveData<Inventory> getItemById(String itemId) {
+        return mRepository.getItemById(itemId);
+    }
+
     public LiveData<List<Inventory>> getAllItems() {
         return mAllItems;
     }

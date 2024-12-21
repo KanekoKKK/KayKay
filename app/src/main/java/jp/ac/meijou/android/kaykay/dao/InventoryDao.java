@@ -35,6 +35,9 @@ public interface InventoryDao {
     @Query("SELECT * FROM inventory WHERE item_index = :itemIndex")
     LiveData<Inventory> getItem(int itemIndex);
 
+    @Query("SELECT * FROM inventory WHERE item_id = :itemId")
+    LiveData<Inventory> getItemById(String itemId);
+
     @Query("SELECT * FROM inventory")
     LiveData<List<Inventory>> getAllItems();
 }

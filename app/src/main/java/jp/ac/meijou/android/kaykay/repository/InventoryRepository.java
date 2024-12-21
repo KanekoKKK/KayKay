@@ -51,6 +51,10 @@ public class InventoryRepository {
         return mInventoryDao.getItem(itemIndex);
     }
 
+    public LiveData<Inventory> getItemById(String itemId) {
+        return mInventoryDao.getItemById(itemId);
+    }
+
     public LiveData<List<Inventory>> getAllItems() {
         return mAllItems;
     }
